@@ -6,7 +6,6 @@
 .sec-menu{
     width: 100%;
     padding: 2% 0%;
-    background-image: url('/img/patron.jpg');
 }
 .header{
     width: 100%;
@@ -17,7 +16,6 @@
 }
 .div-menu{
     width: 100%;
-    background-image: url('/img/shar.jpg');
     background-attachment: fixed;
     background-position: bottom;
     background-size: 10% 15%;
