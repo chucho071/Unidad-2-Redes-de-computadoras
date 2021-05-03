@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 3. Redes de computadoras</title>
+    <link rel="shortcut icon" href="img/rin.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <section class="sec-menu">
+        <header class="header">
+            <h1>Redes de computadoras</h1>
+            <h2>Unidad 3. Dispositivos de red</h2>
+        </header>
+        <div class="div-menu">
+            <nav>
+                <ul class="menu">
+                    <li><a href="#3-1">3.1</a>
+                        <ul>
+                            <h3>Dispositivos de capa física</h3>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#3-2">3.2</a>
+                        <ul>
+                            <h3>Dispositivos de capa de enlace</h3>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#3-3">3.3</a>
+                        <ul>
+                            <h3>Dispositivos de capa de red</h3>
+                        </ul>
+                    </li>
+
+                    <li><a href="#3-4">3.4</a>
+                        <ul>
+                            <h3>Dispositivos de capas superiores</h3>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="seccion-3-1">
+            <section class="row">
+                <div class="titulo">
+                    <h2 id="3-1">3.1 Dispositivos de capa física</h2>
+                </div>
+                <div class="inf-seccion">
+                    <p>La capa física es la que define las especificaciones eléctricas, mecánicas, de procedimiento y funcionales para activar, mantener y desactivar el enlace físico entre sistemas finales, ocupándose de las transmisiones a nivel de bit.</p>
+                </div>
+                <div class="funciones-fisica">
+                    <h3>Funciones principales</h3>
+                    <ul>
+                        <li>Permitir la compatibilidad entre los diferentes tipos de conectores existentes.</li>
+                        <li>Establecer el tipo de cableado que se debe usar en la red.</li>
+                        <li>Coordinar la modulación de las señales.</li>
+                        <li>Amplificar y re-temporizar las señales en su viaje a través de los medios.</li>                        
+                    </ul>
+                </div>
+                <div class="dispositivos-seccion-fisica">
+                    <div>
+                        <h3>Dispositivos</h3>    
+                    </div>
+                    <div class="dispositivo-fisica">
+                        <h4>Repeater (Repetidor)</h4>
+                        <p>Los repetidores no se ocupan se segmentos, ni de paquetes o tramas, se enfoca en saber cómo se representa un cero o un uno para poder regenerarlo. Es por esto que se dice que funciona a un nivel físico.</p>
+                        <img src="./img/repetidor.jpg" alt="">
+                    </div>
+                    <div class="mitad-seccion-fisica">
+                        <div class="cuarto-seccion-fisica" style="border-right: solid grey 1px;">
+                            <h4>Funciones</h4>
+                            <ul>
+                                <li>Se emplean para conectar dos o más segmentos de Ethernet de cualquier tipo de medio físico.</li>
+                                <li>Proporcionan la amplificación y re-sincronización de las señales necesarias para conectar los segmentos.</li>
+                                <li>Monitorizan todos los segmentos conectados para verificar que la red funciona correctamente.</li>     
+                            </ul>
+                        </div>
+                        <div class="cuarto-seccion-fisica">
+                            <h4>Consideraciones en su uso</h4>
+                            <ul>
+                                <li>Las especificaciones IEEE 802.3 describen las reglas para el número máximo de repetidores que pueden ser usados en una configuración.</li>
+                                <li>Cuando se usan repetidores, simplemente se extiende la red a un tamaño mayor.</li>  
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="dispositivo-fisica">
+                        <h4>Hub (Concentrador)</h4>
+                        <p>La forma más habitual consiste en usar un concentrador o Hub para conectar computadoras en una red.</p>
+                        <p>Los Hub forman una topología en estrella. Si queremos unir  varias computadoras que se encuentran conectados a diferentes Hub, lo único que se debe hacer es unir los Hub.</p>
+                        
+                    </div>
+                    <div class="mitad-seccion-fisica">
+                        <div class="cuarto-seccion-fisica" style="border-right: solid grey 1px;">
+                            <h4>Funciones</h4>
+                            <br>
+                            <p>Un concentrador, al igual que un repetidor, toma cualquier señal entrante y la repite hacia todos los puertos. </p>
+                            <br>
+                            <p>Si el concentrador se conecta al trocal, entonces todos los ordenadores situados al final de los segmentos del par trenzado pueden comunicarse con todos los servidores del troncal.</p>
+                        </div>
+                        <div class="cuarto-seccion-fisica">
+                            <img src="./img/hub.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="seccion-3-2">
+            <section class="row">
+                <div class="titulo">
+                    <h2 id="3-2">3.2 Dispositivos de capa de enlace</h2>
+                </div>
+                <div class="inf-seccion">
+                    <p>La función de la capa de enlace es preparar los paquetes de la capa de red para ser transmitidos y controlar el acceso a los medios físicos.</p>
+                </div>
+                <div class="mas-inf">
+                    <h3>Técnicas de control de acceso al medio</h3>
+                    <p>La regulación de la colocación de tramas de datos en los medios es conocida como control de acceso al medio.</p>
+                    <p>Estos métodos se definen mediante protocolos sofisticados, que requieren mecanismos que introducen sobrecargas a la red.</p>
+                </div>
+                <div class="funciones-fisica">
+                    <h4>El método de control de acceso al medio utilizado depende de:</h4>
+                    <ul>
+                        <li>Compartir medios: si y cómo los nodos comparten los medios.</li>
+                        <li>Topología: cómo la conexión entre los nodos se muestra a la capa de enlace de datos.</li>                        
+                    </ul>
+                </div>
+                <div class="articulos">
+                    <article class="articulo">
+                        <div class="inf-articulo">
+                            <h4><ins>Medios compartidos</ins></h4>
+                            <br>
+                            <p>Algunas topologías de red comparten un medio común con varios nodos. En cualquier momento puede haber una cantidad de dispositivos que intentan enviar y recibir datos utilizando los medios de red. Hay reglas que rigen cómo esos dispositivos comparten los medios.</p>
+                            <br>
+                            <h5>Hay dos métodos básicos de control de acceso al medio para medios compartidos:</h5>
+                            <ul>
+                                <li>Controlado: Cada nodo tiene su propio tiempo para utilizar el medio.</li>
+                                <li>Basado en la contención: Todos los nodos compiten por el uso del medio.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="articulo">
+                        <div class="inf-articulo">
+                            <h4><ins>Medios no compartidos</ins></h4>
+                            <br>
+                            <p>Los protocolos de control de acceso al medio para medios no compartidos requieren poco o ningún control antes de colocar tramas en los medios. Estos protocolos tienen reglas y procedimientos más simples para el control de acceso al medio. Tal es el caso de las topologías punto a punto. </p>
+                            <p>En las topologías punto a punto, los medios interconectan sólo dos nodos. En esta configuración, los nodos no necesitan compartir los medios con otros hosts ni determinar si una trama está destinada para ese nodo. Por lo tanto, los protocolos de capa de enlace de datos hacen poco para controlar el acceso a medios no compartidos.</p>
+                        </div>
+                    </article>
+
+                    <article class="articulo">
+                        <div class="inf-articulo">
+                            <h4><ins>Full Duplex y Half Duplex</ins></h4>
+                            <br>
+                            <p>Comunicación half-duplex quiere decir que los dispositivos pueden transmitir y recibir en los medios pero no pueden hacerlo simultáneamente. Ethernet ha establecido reglas de arbitraje para resolver conflictos que surgen de instancias donde más de una estación intenta transmitir al mismo tiempo.</p>
+                            <p>En la comunicación full-duplex, los dos dispositivos pueden transmitir y recibir en los medios al mismo tiempo. La capa de enlace de datos supone que los medios están disponibles para transmitir para ambos nodos en cualquier momento. Por lo tanto, no hay necesidad de arbitraje de medios en la capa de enlace de datos.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="dispositivos-seccion-fisica">
+                    <div>
+                        <h3>Dispositivos</h3>    
+                    </div>
+                    <div class="dispositivo-fisica">
+                        <h4>Bridge (Puente de red)</h4>
+                        <p>Los puentes son utilizados para interconectar segmentos, se encarga de repetir paquetes.
+                            Es un computador con 2 interfaces Ethernet y este opera sobre las 2 interfaces, capturando una de las tarjetas todos los paquetes válidos y entregándolos a la siguiente.</p>
+                    </div>
+                    <div class="mitad-seccion-fisica">
+                        <div class="cuarto-seccion-fisica" style="border-right: solid grey 1px;">
+                            <ul>
+                                <li>Conecta segmentos de red formando una sola subred.</li>
+                                <li>Funciona a través de una tabla de direcciones MAC detectadas en cada segmento al que está conectado.</li>
+                                <li>Cuando detecta un nodo de uno de los segmentos está intentando transmitir datos a un nodo de otro.</li>
+                                <li>Para conocer por donde enviar cada trama que le llega incluye un mecanismo de autoaprendizaje.</li>     
+                            </ul>
+                        </div>
+                        <div class="cuarto-seccion-fisica">
+                            <h4>Características y consideraciones </h4>
+                            <ul>
+                                <li>Los puentes son superiores a los repetidores porque estos no retransmiten errores, ruido o paquetes deformados.</li>
+                                <li>Los puentes pueden hacer decisiones inteligentes.</li> 
+                                <li>Un puente puede lograr aumentar la longitud de una red.</li> 
+                                <li>Un puente es como un repetidor pero añade una función de ‘portero’.</li>  
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="dispositivo-fisica">
+                        <h4>Switch (conmutadores)</h4>
+                        <p>Externamente no se diferencian mucho de los Hub pero tienen un conjunto de funcionalidades que los hacen mucho más interesantes.</p>                        
+                    </div>
+                    <div class="mitad-seccion-fisica">
+                        <div class="cuarto-seccion-fisica" style="border-right: solid grey 1px;">
+                            <p>No se conforman simplemente con leer los bits sino que son capaces de extraer información usando las tramas, y ente otras cosas, obtener la dirección MAC o dirección física de cada dispositivo que está conectado.</p>
+                        </div>
+                        <div class="cuarto-seccion-fisica">
+                            <img src="./img/switch.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="seccion-3-3">
+            <section class="row">
+                <div class="titulo">
+                    <h2 id="3-3">3.3 Dispositivos de capa de red</h2>
+                </div>
+                <div class="inf-seccion">
+                    <p>La capa de red provee servicios para intercambiar secciones de datos individuales a través de la red entre dispositivos finales identificados. </p>
+                </div>
+                <div class="funciones-fisica">
+                    <h3>Para realizar este transporte de extremo a extremo la Capa 3 utiliza cuatro procesos básicos:</h3>
+                    <ul>
+                        <li>Direccionamiento: debe proveer un mecanismo para direccionar estos dispositivos finales. Si las secciones individuales de datos deben dirigirse a un dispositivo final, este dispositivo debe tener una dirección única.</li>
+                        <li>Encapsulamiento: la capa de Red debe proveer encapsulación. Los dispositivos no deben ser identificados sólo con una dirección; las secciones individuales, las PDU de la capa de Red, deben, además, contener estas direcciones.</li>
+                        <li>Enrutamiento: la capa de red debe proveer los servicios para dirigir estos paquetes a su host destino. Los host de origen y destino no siempre están conectados a la misma red. En realidad, el paquete podría recorrer muchas redes diferentes. A lo largo de la ruta, cada paquete debe ser guiado a través de la red para que llegue a su destino final.</li>
+                        <li>Desencapsulamiento: Finalmente, el paquete llega al host destino y es procesado en la Capa 3. El host examina la dirección de destino para verificar que el paquete fue direccionado a ese dispositivo. Si la dirección es correcta, el paquete es desencapsulado por la capa de Red y la PDU de la Capa 4 contenida en el paquete pasa hasta el servicio adecuado en la capa de Transporte.</li>                        
+                    </ul>
+                </div>
+                <div class="dispositivos-seccion-fisica">
+                    <div>
+                        <h3>Dispositivos</h3>    
+                    </div>
+                    <div class="dispositivo-fisica">
+                        <h4>Router (Routeador)</h4>
+                        <p>Es un dispositivo de Networking que se diferencia del resto por tener la capacidad de interconectar als redes internas y las externas. La arquitectura del router está formada por un CPU, memorias, bus de sistema y distintas interfaces de entrada y salida.</p>
+                    </div>
+                    <div class="mitad-seccion-fisica">
+                        <div class="cuarto-seccion-fisica" style="border-right: solid grey 1px;">
+                            <h4>Funciones</h4>
+                            <ul>
+                                <li>Conocer las redes de otros dispositivos de este tipo, filtrar el tráfico en función de la información de capa de red.</li>
+                                <li>Determina la mejor ruta para alcanzar la red de destino y reenviar el tráfico hacia la interfaz correspondiente. </li>    
+                            </ul>
+                        </div>
+                        <div class="cuarto-seccion-fisica">
+                            <img src="./img/router.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="dispositivo-fisica">
+                        <h4>Switch de capa 3</h4>
+                        <p>Esta optimizado para pasar información de forma tan veloz como un switch de nivel 2, pero tiene la inteligencia de escoger el camino más rápido propio de un router. </p>
+                        <img src="./img/switch_niv_3.jpg" alt="">
+                    </div>
+                    <div class="mitad-seccion-fisica">
+                        <div class="cuarto-seccion-fisica" style="border-right: solid grey 1px;">
+                            <h4>Funcionamiento</h4>
+                            <br>
+                            <p>Funciona con las mismas capas que un router. Puede realizar tareas de ruteo, la diferencia es que realiza sus tareas con chips especializados para que el ruteo y switcheode paquetes se haga lo más rápido posible. </p>
+                        </div>
+                        <div class="cuarto-seccion-fisica">
+                            <ul>
+                                <li>Un switch de nivel 3 tiene todos los niveles de control y seguridad con los que un ruteador normalmente cuenta. Existen mecanismos de seguridad para prevenir que un usuario indeseado se conecte a la red, incluso a nivel físico.</li>
+                                <li>Cuenta con la suficiente inteligencia para interactuar con el tráfico que va o viene de la internet.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="seccion-3-4">
+            <section class="row">
+                <div class="titulo">
+                    <h2 id="3-4">3.4 Dispositivos de capas superiores</h2>
+                </div>
+                <div class="inf-seccion">
+                    <p>Luego de haber visto los diferentes dispositivos en las diferentes capas, es necesario estudiarcomo se comunican con otros servidores usando distintos protocolos necesarios en capas superiores.</p>
+                    <h5>Hacemos referencias a protocolos como:</h5>
+                    <ul>
+                        <li>DHCP</li>
+                        <li>DNS</li>
+                        <li>HTTP</li>
+                        <li>SMTP</li>
+                    </ul>
+                </div>
+                <div class="articulos">
+                    <article class="articulo">
+                        <div class="inf-articulo">
+                            <h4><ins>DHCP</ins></h4>
+                            <br>
+                            <p>Funciona sobre un servidor central el cual asigna direcciones IP  a otras máquinas de la red. Este protocolo puede entregar información IP en una LAN o entre varias LAN.</p>
+                            <br>
+                            <p>Reduce el trabajo del administrador, ahorrando la visita a cada uno de los ordenadores que hay.</p>
+                            <br>
+                            <p>Un servidor DCHP es un equipo en una red que está corriendo un servidor DCHP.</p>
+                        </div>
+                    </article>
+
+                    <article class="articulo">
+                        <div class="inf-articulo">
+                            <h4><ins>DNS</ins></h4>
+                            <br>
+                            <p>Este protocolo se utiliza para poder recordar de manera sencilla las direcciones IP. De esta manera surge el concepto de nombres de dominio. Gracias a esto podemos asignar a una dirección IP un nombre, además de que es más fiable porque la dirección IP de un servidor puede cambiar pero el nombre no lo hace.</p>
+                        </div>
+                    </article>
+
+                    <article class="articulo">
+                        <div class="inf-articulo">
+                            <h4><ins>HTTP</ins></h4>
+                            <br>
+                            <p>Un protocolo de nivel de aplicación orientado a sistemas distribuidos para la colaboración e hipermedia.</p>
+                            <br>
+                            <p>Un protocolo genérico, sin estado, orientado a objetos y que puede ser utilizado para muchas aplicaciones, como servidores de nombres y sistemas de gestión de objetos distribuidos, a través de los métodos de petición.</p>
+                            <br>
+                            <p>Una característica de este protocolo es la negociación de los tipos y representación de los datos, permitiendo que los sistemas no dependan del tipo de datos que se utilicen.</p>
+                        </div>
+                    </article>
+
+                    <article class="articulo">
+                        <div class="inf-articulo">
+                            <h4><ins>SMTP</ins></h4>
+                            <br>
+                            <p>Protocolo supe de transferencia de correo, está diseñado para transferir correo confiable y eficiente. Se utiliza ampliamente en instalaciones gubernamentales y de educación y también es el estándar utilizado en internet para transferir correo.</p>
+                            <br>
+                            <p>Es un protocolo abierto porque la única suposición que hace del mecanismo de transporte debajo de él es que proporciona un servicio confiable.</p>
+                            <br>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+    </section>
+</body>
